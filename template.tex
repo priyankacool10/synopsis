@@ -1,0 +1,85 @@
+%%-------------------------------------------------- READ THE COMMENTS CAREFULLY ------------------------------------------%%
+%%%%%%%%%%%%%%% Template for generating Report and Presentation according to G.N.D.E.C., Ludhiana's format %%%%%%%%%%%%%%%%%%%%%%%
+%% Here myclass is the class name
+%% print is used for making a report
+%% screen is used for making a presentation
+%% If you want the content common in print and screen, then don't specify the content in screen or print environment.
+%%----------------------------------------------------------------------------------------------------------------------------
+\documentclass[12pt]{myclass}
+\usepackage[sectionbreak]{pdfscreen}             %% If you want to produce presesntation then use screen, otherwise use print
+%---------------------------------------------------
+\usepackage{setspace}
+\linespread{1.5}
+\usepackage{float}
+
+\renewcommand{\rmdefault}{ptm}				%% font style Times New Roman
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-35pt}{30pt}
+%----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        %% Here replace your project name
+\usepackage[left=2.5cm, right=1.5cm, top=2.5cm, bottom=1.5cm]{geometry}
+%\pagestyle{fancy}
+
+%-----------------------------------------%% These commands are used in first page after titlepage
+\newcommand{\student}{\vskip 2.5cm}
+\newcommand{\supervisor}{\vskip 2cm}
+\newcommand{\stamp}{\vskip 2.5cm}                                
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%% Title page %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\uppercase{ \title{e-Notice Application}}
+\subtitle{For Android Phones}
+\purpose{Synopsis} % or synopsis or Mid term report
+\branch{IT} 
+
+\author{Priyanka Kapoor}
+\classrollno{106160}
+\unirollno{100371180720}
+
+\name{Submitted to which guide} %Prof. Sukhjit Singh Sehra
+
+\branch{Information Technology}     %%INFORMATION TECHNOLOGY
+
+
+%%----------------------------------------------------------------------%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%------------------- Body of document----------------------------------%%
+\begin{document}
+
+
+ \maketitle                                 %%% Title page for report
+
+
+\pagenumbering{Roman}                  %% Pagenumering can be in Roman or arabic
+
+\tableofcontents 
+\newpage       %% This command automatically generates Index page
+\listoffigures                         %% This command creates a list of figures in the document
+\newpage
+%\thispagestyle{empty}
+
+\pagenumbering{arabic}                  %% now onwards arabic page numbeing is required
+%\cfoot{\thepage}                       %% centered footer (page no.)
+
+%------------------------------------------------------
+\include{intro}
+%-----------------------------------------------------------
+\include{objective}
+%-------------------------------------------------
+\include{technical}
+\include{inovation}
+
+\include{current}
+
+\end{document}
+%%------------------------End document-------------------------%%
